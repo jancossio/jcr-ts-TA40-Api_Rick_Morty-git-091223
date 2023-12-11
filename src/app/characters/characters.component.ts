@@ -3,8 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { ComunicateService } from '../comunicate.service'
 
 import { CommonModule } from '@angular/common';
-import { Router } from '@angular/router';
-import { RouterLink, RouterOutlet } from '@angular/router';
+import { Router, RouterLink, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-characters',
@@ -24,6 +23,5 @@ export class CharactersComponent {
   getCharacters(){
     this.comuService.getRandomCharacters(12)
     .subscribe(result => {this.characters = result})
-    
   }
 }

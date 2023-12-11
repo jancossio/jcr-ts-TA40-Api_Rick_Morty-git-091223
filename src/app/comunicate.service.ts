@@ -13,8 +13,13 @@ export class ComunicateService {
 
   constructor(private httpClient:HttpClient) { }
 
+  getCharacter(idChar:string){
+    console.log(this.httpClient.get(this.characters+idChar));
+    return this.httpClient.get(this.characters+idChar);   
+  }
+
   getCharacters(){
-    let id="1,2,3,4,5"
+    let id="1,2,3,4,5";
     return this.httpClient.get(this.characters+id);   
   }
 
